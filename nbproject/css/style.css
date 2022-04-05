@@ -1,0 +1,138 @@
+body{
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+main{
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+.menu_principal {
+    margin: auto;
+    width: 100%;    
+    height: 60px;
+}
+.logo{
+    padding: 15px;
+    float: left;
+    width: 90%;
+    margin-bottom: -40px;
+}
+/*.header_2{
+       
+    border-bottom: 80px solid white;
+}*/
+
+.menu ul li{ 
+    margin-top: 20px; 
+    display: inline-block;   
+    color:white;
+    margin-left: 15px;    
+}
+.menu ul li a{    
+    margin-left: 70px;
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.menu ul li a:hover{
+    color:blueviolet ;
+    border-bottom: 1px solid blueviolet;
+}
+.menu {
+    width: 100%;
+    float: left;
+    background-color: #41B8C0;
+}
+.btn_login{
+    float: right;
+    font-size: 15px;
+    background-color:#41B8C0;
+    color: white;
+    padding: 5px 5px 5px 5px;
+}
+.btn_login a{
+    color: white;
+}
+.pesquisar{    
+    margin-top: 19px;
+    font-style: italic;
+    font-size: 15px;
+    float: right;
+    margin-right: 7%;    
+}
+.d-block {
+    max-width: 50%;
+    max-height: 50%;
+    display: block!important;
+    margin-left: 25%;
+    margin-top: 1%;
+}
+.carousel-control-prev{
+    width: 55%;    
+    opacity: 1;
+}
+.carousel-control-next{
+    width: 55%;
+    opacity: 1;
+}
+.form_associe{
+    text-align: center;
+    margin-top: 20px;
+    border: 2px double gainsboro ;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.form_titulo{
+    margin-bottom: 25px;
+}
+.form_campo1{
+    margin-left: 2%;
+    width: 50%;
+}
+.form_campo2{
+    margin-left: 2%;
+    width: 23.8%;
+}
+.button_form{
+    background-color: #41B8C0;
+    color: white;
+    margin-left: 3.3%;
+    margin-bottom: 20px;
+}
+.atendimento{
+    text-align: center;
+    background-color: white;
+    margin-top: 20px;
+    border: 2px double gainsboro ;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 20px;
+}
+.fones{
+    text-align: center;    
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5%;
+    font-size: 20px;
+    border: 1px solid gray;
+    padding: 1% 1% 3% 1%;
+}
+.contato_telefone{
+    float: left;    
+    margin-left: 25%;
+}
+.contato_whats{
+    float: right;
+    margin-right: 25%;
+}
+.header_1 img {
+    float: left;
+    margin: 10px;
+    margin-bottom: -15px;
+    margin-top: -15px;
+}
