@@ -1,4 +1,4 @@
-<div id="parent_header">
+<div id="super_header">
     <div class="header_1">
             <a href="index.html"><img src="./img/logo.png" alt="logo"></a>
             <div class="logo">

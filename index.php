@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/css.css">
     <link rel="icon" type="img" href="./img/logo.png" />
     <title>SAPINRS</title>
 </head>
@@ -15,26 +15,29 @@
 <body>
     <header class="menu_principal">
     </header>
+    <div>
     <?php
-    include_once("./views/header.php");
+    include_once'./views/header.php';
     ?>
+    </div>
+    <br>
     <!--Carousel-->
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-50" src="./img/1.png" alt="Primeiro Slide">
+                <img class="d-block" src="./img/1.png" alt="Primeiro Slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-50" src="./img/2.png" alt="Segundo Slide">
+                <img class="d-block " src="./img/2.png" alt="Segundo Slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-50" src="./img/3.png" alt="Terceiro Slide">
+                <img class="d-block " src="./img/3.png" alt="Terceiro Slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-50" src="./img/4.png" alt="Quarto Slide">
+                <img class="d-block " src="./img/4.png" alt="Quarto Slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-50" src="./img/5.png" alt="Quinto Slide">
+                <img class="d-block " src="./img/5.png" alt="Quinto Slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
@@ -68,12 +71,9 @@
 </body>
 <footer class="footer">
     <!--Telefones de contato-->
-    <div class="fones">
-        <h1 class="contato">Contato</h1>
-        <p>Atendimento Telefônico e Online</p>
-        <p class="contato_telefone">Telefone: (51) 3332-0001 </p>       
-        <p class="contato_whats">WhatsApp: (51) 9 9993-0001</p>        
-    </div>
+    <?php
+        include_once './views/footer.php';
+    ?>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
