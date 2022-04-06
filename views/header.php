@@ -2,7 +2,7 @@
     <div class="header_1">
             <a href="index.html"><img src="./img/logo.png" alt="logo"></a>
             <div class="logo">
-                <button class="btn_login"><a href="#"> Acessar o portal</a></button>
+                <button class="btn_login"><a href="./views/login.php"> Acessar o portal</a></button>
             </div>
     </div>
     <div class="header_2">

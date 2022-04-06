@@ -1,3 +1,8 @@
+:root{
+    --cor-cinza-div: #eeeeee;
+    --cor-verde-menu: #41B8C0;
+}
+
 body{
     background-color: aliceblue;
     width: 100%;
@@ -46,7 +51,7 @@ main{
 .menu {
     width: 100%;
 /*    float: left;*/
-    background-color: #41B8C0;
+    background-color: var(--cor-verde-menu);
 }
 .btn_login{
     float: right;
@@ -82,7 +87,7 @@ main{
 }
 .form_associe{
     text-align: center;
-    background-color: #eeeeee;
+    background-color: var(--cor-cinza-div);
     margin-top: 20px;
     border: 2px double gainsboro ;
     margin-left: 20%;
@@ -134,4 +139,8 @@ main{
     margin: 10px;
     margin-bottom: -15px;
     margin-top: -15px;
+}
+
+.login_div{
+    background-color: var(--cor-cinza-div);
 }
