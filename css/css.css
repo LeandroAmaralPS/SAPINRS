@@ -1,70 +1,80 @@
-:root{
+:root {
     --cor-cinza-div: #eeeeee;
     --cor-verde-menu: #41B8C0;
 }
 
-body{
+body {
     background-color: aliceblue;
     width: 100%;
     height: 100%;
     margin: 0 auto;
 }
-main{
+
+main {
     margin: 0 auto;
     width: 100%;
     position: relative;
 }
-.menu_principal {
+
+.menu_principal {    
     margin: auto;
-    width: 100%;    
+    width: 100%;
     height: 60px;
 }
-.logo{
+
+.logo {
     padding: 15px;
     float: left;
     width: 90%;
     margin-bottom: -40px;
 }
+
 /*.header_2{
        
     border-bottom: 80px solid white;
 }*/
 
-.menu ul li{ 
-    margin-top: 20px; 
-    display: inline-block;   
-    color:white;
-    margin-left: 15px;    
+.menu ul li {
+    margin-top: 20px;
+    display: inline-block;
+    color: white;
+    margin-left: 15px;
 }
-.menu ul li a{    
+
+.menu ul li a {
     margin-left: 70px;
-    color:white;
+    color: white;
     text-decoration: none;
     font-size: 20px;
     text-transform: uppercase;
 }
-.menu ul li a:hover{
+
+.menu ul li a:hover {
     background-color: #30A7B9;
-    color:black;
+    color: black;
     border-bottom: 1px solid black;
 }
+
 .menu {
     width: 100%;
-/*    float: left;*/
+    /*    float: left;*/
     background-color: var(--cor-verde-menu);
 }
-.btn_login{
+
+.btn_login {
     margin-top: -60px;
     float: right;
     font-size: 15px;
-    background-color:#41B8C0;
+    background-color: #41B8C0;
     color: white;
     padding: 5px 5px 5px 5px;
 }
-.btn_login a{
+
+.btn_login a {
     color: white;
 }
-.pesquisar{    
+
+.pesquisar {
     margin-top: 19px;
     font-style: italic;
     font-size: 15px;
@@ -72,77 +82,86 @@ main{
     margin-right: -112%;
     padding: 0px 35px 0px 122px;
 }
+
 .d-block {
     max-width: 50%;
     max-height: 50%;
-    display: block!important;
+    display: block !important;
     margin-left: 25%;
     margin-top: 1%;
 }
-.carousel-control-prev{
+
+.carousel-control-prev {
     width: 55%;
     opacity: 1;
 }
-.carousel-control-next{
-    width: 55%; 
+
+.carousel-control-next {
+    width: 55%;
     opacity: 1;
 }
-.form_associe{
+
+.form_associe {
     text-align: center;
     background-color: var(--cor-cinza-div);
     margin-top: 20px;
-    border: 2px double gainsboro ;
+    border: 2px double gainsboro;
     margin-left: 20%;
     margin-right: 20%;
 }
-.form_titulo{
+
+.form_titulo {
     margin-bottom: 25px;
 }
-.form_campo1{
+
+.form_campo1 {
     margin-left: 2%;
     width: 50%;
 }
-.form_campo2{
+
+.form_campo2 {
     margin-left: 2%;
     width: 23.8%;
 }
-.button_form{
+
+.button_form {
     background-color: #41B8C0;
     color: white;
     margin-left: 3.3%;
     margin-bottom: 20px;
 }
-.atendimento{
+
+.atendimento {
     text-align: center;
     background-color: white;
     margin-top: 20px;
-    border: 2px double gainsboro ;
+    border: 2px double gainsboro;
     margin-left: 20%;
     margin-right: 20%;
     font-size: 20px;
 }
-.fones{
-    text-align: center;    
+
+.fones {
+    text-align: center;
     margin-top: 20px;
     font-size: 20px;
     background-color: #c6c4c5;
     padding: 1% 1% 5% 1%;
 }
-.contato_telefone{
-    float: left;    
+
+.contato_telefone {
+    float: left;
     margin-left: 25%;
 }
-.contato_whats{
+
+.contato_whats {
     float: right;
     margin-right: 25%;
 }
+
 .header_1 img {
     float: left;
     margin: 10px;
     margin-bottom: -15px;
     margin-top: -80px;
-}
-
-.login_div{
-    background-color: var(--cor-cinza-div);
 }
