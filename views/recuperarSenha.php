@@ -9,25 +9,22 @@
     <a class="links" id="paralogin"></a>
      
     <div class="content">      
-      <!--FORMULÁRIO DE LOGIN-->
+      <!--FORMULÁRIO DE RECUPERAR SENHA-->
       <div id="login">
         <form method="post" action="">
-          <h1>Login</h1> 
+          <h1>Recuperar a senha</h1> 
           <p> 
-            <label for="nome_login">Seu login</label>
-            <input id="nome_login" name="nome_login" required="required" type="text" placeholder="Login:"/>
+            <label for="cpf">CPF:</label>
+            <input id="cpf" name="cpf" required="required" type="text" placeholder="Informe seu CPF:"/>
           </p>
            
           <p> 
-            <label for="senha">Sua senha</label>
-            <input id="senha" name="senha" required="required" type="password" placeholder="Senha:" /> 
+            <label for="email_login">Seu e-mail:</label>
+            <input id="email_login" name="email_login" required="required" type="email" placeholder="Informe seu e-mail:" /> 
           </p>           
           <p> 
-            <input type="submit" value="Logar" /> 
-          </p>
-          <p>            
-            <a href="recuperarSenha.php"> Recuperar a senha:</a>
-</p>     
+            <input type="submit" value="Enviar" /> 
+          </p>          
         </form>
       </div>
         </div>
