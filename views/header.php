@@ -12,9 +12,9 @@
                 <li><a href="#">Associe-se</a></li>
                 <li><a href="#">Contato</a></li>
                 <li><a href="#">Horários de atendimento</a></li>
-                <li>
+                <!--<li>
                     <input class="pesquisar" placeholder="Pesquisar" type="text">
-                </li>
+                </li>-->
             </ul>
         </div>
     </div>

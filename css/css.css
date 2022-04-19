@@ -56,7 +56,8 @@ main {
 }
 
 .menu {
-    width: 100%;
+    width: auto;
+    height: auto;
     /*    float: left;*/
     background-color: var(--cor-verde-menu);
 }
@@ -78,8 +79,6 @@ main {
     margin-top: 19px;
     font-style: italic;
     font-size: 15px;
-    float: right;
-    margin-right: -112%;
     padding: 0px 35px 0px 122px;
 }
 
@@ -163,5 +162,5 @@ main {
     float: left;
     margin: 10px;
     margin-bottom: -15px;
-    margin-top: -80px;
+    margin-top: -55px;
 }
