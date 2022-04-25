@@ -17,7 +17,8 @@
     </header>
     <div>
     <?php
-include_once './views/header.php';
+    $frame = "inicial";
+    include_once './views/menu.php';
 ?>
     </div>
     <br>

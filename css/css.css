@@ -22,66 +22,10 @@ main {
     height: 60px;
 }
 
-.logo {
-    padding: 15px;
-    float: left;
-    width: 90%;
-    margin-bottom: -40px;
-}
-
 /*.header_2{
        
     border-bottom: 80px solid white;
 }*/
-
-.menu ul li {
-    margin-top: 20px;
-    display: inline-block;
-    color: white;
-    margin-left: 15px;
-}
-
-.menu ul li a {
-    margin-left: 70px;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-
-.menu ul li a:hover {
-    background-color: #30A7B9;
-    color: black;
-    border-bottom: 1px solid black;
-}
-
-.menu {
-    width: 100%;
-    /*    float: left;*/
-    background-color: var(--cor-verde-menu);
-}
-
-.btn_login {
-    margin-top: -60px;
-    float: right;
-    font-size: 15px;
-    background-color: #41B8C0;
-    color: white;
-    padding: 5px 5px 5px 5px;
-}
-
-.btn_login a {
-    color: white;
-}
-
-.pesquisar {
-    margin-top: 19px;
-    font-style: italic;
-    font-size: 15px;
-    float: right;
-    margin-right: -112%;
-    padding: 0px 35px 0px 122px;
-}
 
 .d-block {
     max-width: 50%;
@@ -159,9 +103,3 @@ main {
     margin-right: 25%;
 }
 
-.header_1 img {
-    float: left;
-    margin: 10px;
-    margin-bottom: -15px;
-    margin-top: -80px;
-}

@@ -167,3 +167,6 @@ input[type="submit"]:hover {
     animation-timing-function: ease;
     animation-fill-mode: both;
 }
+.recuperaSenha{
+    margin-left: 150px;
+}

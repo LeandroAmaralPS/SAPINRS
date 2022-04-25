@@ -1,0 +1,84 @@
+:root {
+    --cor-cinza-div: #eeeeee;
+    --cor-verde-menu: #41B8C0;
+}
+
+.pesquisar {
+    margin-top: 19px;
+    font-style: italic;
+    font-size: 15px;
+    float: right;
+    margin-right: -112%;
+    padding: 0px 35px 0px 122px;
+}
+
+.div_login {
+    padding: 15px;
+    float: left;
+    width: 90%;
+    margin-bottom: -40px;
+}
+
+.header_1 img {
+    float: left;
+    margin: 10px;
+    margin-bottom: -15px;
+    margin-top: -55px;
+}
+
+.btn_login {
+    margin-top: -60px;
+    float: right;
+    font-size: 15px;
+    background-color: #41B8C0;
+    color: white;
+    padding: 5px 5px 5px 5px;
+}
+
+.btn_login a {
+    color: white;
+}
+
+.menu ul li {
+    margin-top: 20px;
+    display: inline-block;
+    color: white;
+    margin-left: 15px;
+}
+
+.menu ul li a {
+    margin-left: 70px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.menu ul li a:hover {
+    background-color: #30A7B9;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.menu {
+    width: 100%;
+    /*    float: left;*/
+    background-color: var(--cor-verde-menu);
+}
+
+.small_header div{
+    width: 32%;
+    display: inline-block;
+    margin-left: 18px;
+}
+.center_div{
+    text-align: center;
+}
+.left_div{
+    text-align: right;
+}
+
+.title{
+    color: white;
+    font-weight: bold;
+}
