@@ -14,14 +14,6 @@
         $frame = "Locações";
         include_once '../menu.php';
         
-        $locacoes = array(
-            array("nome" => "Salão de Festas", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "1.png", "capacidade" => "X cabeças"),
-            array("nome" => "Piscina", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "2.png", "capacidade" => "X cabeças"),
-            array("nome" => "Churrasqueira", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "3.png", "capacidade" => "X cabeças"),
-            array("nome" => "Salão de Festas 2", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "4.png", "capacidade" => "X cabeças"),
-            array("nome" => "Auditório", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "5.png", "capacidade" => "X cabeças"),
-            array("nome" => "Churrasqueira 2", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "6.jpg", "capacidade" => "X cabeças"),
-        );
         ?>
         <script>
         </script>

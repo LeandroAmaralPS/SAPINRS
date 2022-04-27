@@ -14,14 +14,7 @@
         $frame = "Locações";
         include_once '../menu.php';
         
-        $locacoes = array(
-            array("nome" => "Salão de Festas", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "1.png"),
-            array("nome" => "Piscina", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "2.png"),
-            array("nome" => "Churrasqueira", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "3.png"),
-            array("nome" => "Salão de Festas 2", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "4.png"),
-            array("nome" => "Auditório", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "5.png"),
-            array("nome" => "Churrasqueira 2", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "6.jpg"),
-        );
+
         ?>
         <script>
             var locacoesArray = <?php echo json_encode($locacoes); ?>;

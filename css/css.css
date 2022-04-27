@@ -1,5 +1,5 @@
 :root {
-    --cor-cinza-div: #eeeeee;
+    --cor-cinza-div: whitesmoke;
     --cor-verde-menu: #41B8C0;
 }
 
@@ -27,8 +27,6 @@ main {
     border-bottom: 80px solid white;
 }*/
 
-<<<<<<< HEAD
-=======
 .menu ul li {
     margin-top: 20px;
     display: inline-block;
@@ -77,7 +75,6 @@ main {
     padding: 0px 35px 0px 122px;
 }
 
->>>>>>> bdb7bf79ff229bce656ed2223641b027aea3b269
 .d-block {
     max-width: 50%;
     max-height: 50%;
@@ -154,12 +151,10 @@ main {
     margin-right: 25%;
 }
 
-<<<<<<< HEAD
-=======
 .header_1 img {
     float: left;
     margin: 10px;
     margin-bottom: -15px;
     margin-top: -55px;
 }
->>>>>>> bdb7bf79ff229bce656ed2223641b027aea3b269
+

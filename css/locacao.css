@@ -8,7 +8,7 @@ body{
 }
 
 .div_pai{
-    margin-left: 400px;
+    margin-left: 16%;
     margin-bottom: 100px;
     background-color: whitesmoke;
     width: 350px;
@@ -17,6 +17,11 @@ body{
     display: inline-block;
     position: relative;    
 }   
+
+.div_pai label{
+    display: flex;
+    justify-content: center;
+}
 
 #locacao_div span,#locacao_div a{
     display: flex;
@@ -40,7 +45,7 @@ body{
 }
 
 #locacao_info{
-    margin-left: 450px;
+    margin-left: 22%;
     margin-top: 30px;
     height: 950px;
     width: 55%;

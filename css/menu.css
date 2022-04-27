@@ -1,5 +1,5 @@
 :root {
-    --cor-cinza-div: #eeeeee;
+    --cor-cinza-div: whitesmoke;
     --cor-verde-menu: #41B8C0;
 }
 
@@ -30,7 +30,7 @@
     margin-top: -60px;
     float: right;
     font-size: 15px;
-    background-color: #41B8C0;
+    background-color: var(--cor-verde-menu);
     color: white;
     padding: 5px 5px 5px 5px;
 }
@@ -51,7 +51,6 @@
     color: white;
     text-decoration: none;
     font-size: 20px;
-    text-transform: uppercase;
 }
 
 .menu ul li a:hover {
@@ -67,9 +66,10 @@
 }
 
 .small_header div{
-    width: 32%;
+    width: 33%;
     display: inline-block;
-    margin-left: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
 }
 .center_div{
     text-align: center;
@@ -81,4 +81,13 @@
 .title{
     color: white;
     font-weight: bold;
+}
+
+.small_header i{
+    color: #eeeeee; 
+    font-size: 28px;
+}
+
+.small_header{
+    background: var(--cor-verde-menu);
 }
