@@ -29,7 +29,7 @@
     </head>
     <body>
         <div id="perfil_info">
-
+<!-- TEMOS QUE ARRUMAR ESSE BOTÃO -->
             <div id="perfil_header">
                 <div class="aba" onclick="changeAba('#aba_perfil')">Perfil</div>
                 <div class="aba" onclick="changeAba('#aba_pagamentos')">Pagamentos</div>

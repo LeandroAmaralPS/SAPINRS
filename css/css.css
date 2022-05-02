@@ -64,6 +64,24 @@ main {
     padding: 5px 5px 5px 5px;
 }
 
+.btn_login2 {
+    margin-top: -60px;
+    float: right;
+    font-size: 15px;
+    background-color: #41B8C0;
+    color: white;
+    padding: 5px 5px 5px 5px;
+    margin-right: 50px !important;
+}
+.btn_login3 {
+    margin-top: -60px;
+    float: right;
+    font-size: 15px;
+    background-color: #41B8C0;
+    color: white;
+    padding: 5px 5px 5px 5px;
+    margin-right: 126px !important;
+}
 .btn_login a {
     color: white;
 }

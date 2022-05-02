@@ -16,30 +16,60 @@
         ?>
         <script>
             $(document).ready(function () {
-                changeAba('#aba_perfil');
+                changeAba('#aba_logo');
             });
             
             function changeAba(aba){
-                $("#aba_perfil").hide();
-                $("#aba_pagamentos").hide();
-                $("#aba_locacoes").hide();
+                $("#aba_logo").hide();
+                $("#aba_perfil_editar").hide();
                 $(aba).show();
             }
         </script>
     </head>
     <body>
         <div id="perfil_info">
-
-            <div id="perfil_header">
-                <div class="aba" onclick="changeAba('#aba_perfil')">Perfil</div>
-                <div class="aba" onclick="changeAba('#aba_pagamentos')">Pagamentos</div>
-                <div class="aba" onclick="changeAba('#aba_locacoes')">Locações</div>
+            <ul>
+                <li class="aba"">Perfil
+                    <ul  class="sub_aba">
+                        <li onclick="changeAba('#aba_perfil_editar')">Editar Perfil</li>
+                    </ul>
+                </li>
+                <li class="aba">Administrativo
+                    <ul class="sub_aba">
+                        <li>Locações<hr></li>
+                        <li>Permições<hr></li>
+                        <li>Usuários<hr></li>
+                    </ul>
+                </li>
+                <li class="aba" >Financeiro
+                    <ul class="sub_aba">
+                        <li>Despesas <hr></li>
+                        <li>Formas de Pagamento<hr></li>
+                        <li>Gerentes<hr></li>
+                        <li>NFS-E<hr></li>
+                    </ul>
+                </li>
+                <li class="aba" >Relatório</li>
+                <li class="aba" onclick="window.location.href = '/SAPINRS/index.php'" >Portal</li>
+            </ul>
+        </div>
+        <div id="div_colaborador">
+            <div class="div_interna" id="div_info_colaborador">
+                <img src="/SAPINRS/img/usuario.jpg" width="100px" height="100px"/><br>
+                <b><label>Nome do Colaborador</label></b><br>
+                <label>Matricula: 123123</label><br>
+                <label>Setor: TI</label>
+                <hr>
+                Atalhos
             </div>
-            
-            <div id="perfil_content">
-                <div class="div_pai" id="aba_perfil">perfil</div>
-                <div class="div_pai" id="aba_pagamentos">pagamentos</div>
-                <div class="div_pai" id="aba_locacoes">locações</div>
+            <div class="div_interna" id="div_view_colaborador">
+                <img id="aba_logo" src="/SAPINRS/img/logo.png" width="150px" height="150px"/>
+                <?php
+                    include_once '../forms/form_editar_perfil.php';
+//                    include_once '/SAPINRS/views/forms/';
+//                    include_once '/SAPINRS/views/forms/';
+//                    include_once '/SAPINRS/views/forms/';
+                ?>
             </div>
         </div>
     </body>

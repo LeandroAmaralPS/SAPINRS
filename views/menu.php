@@ -29,8 +29,9 @@
             if(!isset($_SESSION["logado"])){
                 echo '<a href="/SAPINRS/views/login.php"><button class="btn_login">Acessar o portal</button></a>';
             } else { 
-                echo '<a href="./controller/loginController.php"><button class="btn_login">Deslogar</button></a>';
+                echo '<a href="./controller/loginController.php"><button class="btn_login2">Deslogar</button></a>';
                 echo '<a href="/SAPINRS/views/perfis/perfil_usuario.php"><button class="btn_login">Perfil</button></a>';
+                echo '<a href="/SAPINRS/views/perfis/perfil_colaborador.php"><button class="btn_login3">Area do colaborador</button></a>';          
             }
             echo '</div>';
             ?>
@@ -41,7 +42,7 @@
                 <li><a href="views/locacoes/locacoes-list.php">Espaços locações</a></li>
                 <li><a href="#">Associe-se</a></li>
                 <li><a href="#">Contato</a></li>
-                <li><a href="views/perfis/perfil_colaborador.php">Horários de atendimento</a></li>
+                <li><a href="#">Horários de atendimento</a></li>
                 <!--<li>
                     <input class="pesquisar" placeholder="Pesquisar" type="text">
                 </li>-->
@@ -97,9 +98,6 @@
             <div class="left_div">
                 <label class="title" style="color: #41B8C0 !important;">nome do usuário</label>
             </div>
-    </div>
-    <div class="submenu_colaborador">
-        
     </div>
     <?php
     break; 
