@@ -6,12 +6,4 @@ https://docs.google.com/document/d/1uHyxf0nQbeOXj4uPScIY-66v17AsPCs5/edit?usp=sh
 
 Figma: https://www.figma.com/file/Ki6EZeeEmSI2N3fB4n3zf1
 
-tipo_usuario - (id, nome [gerente, socio, colaborado, n socio]);
-
-login - (id, usuario, password, nome, cpf, email, telefone, dt_nasc, status enum[ativo, inativo, analise], fk_tipo_usuario);
-
-locação - (id, nome, descricao, preco, capacidade, hora_inicio, hora_fim);
-
-img - (id, nome, fk_locacao);
-
-aluguel - (id, turno, status, data, fk_login);
+Link com videos : https://drive.google.com/drive/folders/1t0Po8XKWutcOoNGUp_8Y6ZfN9KGvs1mN?usp=sharing
