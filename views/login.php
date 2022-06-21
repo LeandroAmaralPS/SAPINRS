@@ -32,4 +32,9 @@
                 </div>
             </div>
     </body>    
+    <script>
+        if (<?= isset($_REQUEST['erroLogin']) ?>) {
+                alert('senha ou login incorretos!');
+            };
+    </script>
 </html>

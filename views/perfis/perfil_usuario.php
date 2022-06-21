@@ -11,15 +11,38 @@
         <link rel="stylesheet" type="text/css" href="/SAPINRS/css/usuario_Perfil.css">
         <title>Locação info</title>
         <?php
-$frame = "usuario";
-include_once '../menu.php';
-?>
+        $frame = "usuario";
+        include_once '../menu.php';
+        include_once '../../controller/usuarioController.php';
+
+        $user = usuarioController::getUsuarioById($_SESSION['logado'])[0];
+
+        $alugueis = usuarioController::getLocacoesUser($user['id']);
+        $valor = 0;
+        foreach (json_decode($alugueis) as $aluguel) {
+            if (date('m',strtotime($aluguel->data)) == date('m')) {
+                $valor += $aluguel->preco;
+            }
+        }
+        
+        ?>
         <script>
             $(document).ready(function () {
                 changeAba('#aba_perfil');
             });
-            
-            function changeAba(aba){
+
+            function cancelarAluguel(id) {
+                $.ajax({
+                    type: 'post',
+                    url: '/SAPINRS/process/aluguelHelper.php',
+                    data: {id: id, acao: 'excluir'},
+                    success: function (res) {
+                        alert(res);
+                    }
+                });
+            }
+
+            function changeAba(aba) {
                 $("#aba_perfil").hide();
                 $("#aba_pagamentos").hide();
                 $("#aba_locacoes").hide();
@@ -35,40 +58,42 @@ include_once '../menu.php';
                 <div class="aba" onclick="changeAba('#aba_pagamentos')">Pagamentos</div>
                 <div class="aba" onclick="changeAba('#aba_locacoes')">Locações</div>
             </div>
-            
+
             <div id="perfil_content">
-            <img src="/SAPINRS/img/usuario.jpg" width="100px" height="100px"/>
+                <img src="/SAPINRS/img/usuarios/<?= $user['foto'] ?>" width="100px" height="100px"/>
                 <div class="div_pai"  id="aba_perfil">Dados do usuário
-                    <p>Matricula: 00000000</p>
-                    <p>CPF: 000.000.000-00</p>
-                    <p>Data de nascimento: 11/11/1111</p>
-                    <p>E-mail: abcd@gmail.com</p>
+                    <p>CPF: <?= $user['cpf'] ?></p>
+                    <p>Data de nascimento: <?= date_format(date_create($user['dt_nasc']), 'd/m/Y') ?></p>
+                    <p>E-mail: <?= $user['email'] ?></p>
                 </div>
-                
+
                 <div class="div_pai" id="aba_pagamentos">Pagamenos do usuário
-                <p>Nome completo do socio</p>
-                <p>Matricula: 00000000</p>
-                    <p>Valor: R$ 1.000,00</p>
-                    <p>Data de vencimento: 11/11/1111</p>                   
+                    <p><?= $user['nome'] ?></p>
+                    <p>CPF: <?= $user['cpf'] ?></p>
+                    <p>Valor: R$ <?=number_format((float)$valor, 2, ',', '')?></p>
+                                      
                 </div>
                 <div class="div_pai" id="aba_locacoes">Locações do usuário
-                 <table>
-                     <thead class="td_locacoes">
-                     <th class="td_locacoes">Nome</th>
-                     <th class="td_locacoes">Data</th>
-                     <th class="td_locacoes">Preço</th>
-                     <th class="td_locacoes">Cancelar</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="td_locacoes">Piscina</td>
-                <td class="td_locacoes">11/11/2022</td>
-                <td class="td_locacoes">R$ 62,00</td>
-                <td class="td_locacoes"><button class="btn btn-danger">Cancelar</button></td>
-                <td></td>
-            </tr>
-        </tbody>
-                 </table>
+                    <table>
+                        <thead class="td_locacoes">
+                        <th class="td_locacoes">Nome</th>
+                        <th class="td_locacoes">Data</th>
+                        <th class="td_locacoes">Preço</th>
+                        <th class="td_locacoes">Cancelar</th>
+                        </thead>
+                        <tbody>
+                            <?php
+                            foreach (json_decode($alugueis) as $aluguel) {
+                                echo '<tr>';
+                                echo "<td class = 'td_locacoes'>$aluguel->nome</td>";
+                                echo "<td class = 'td_locacoes'>" . date_format(date_create($aluguel->data), 'd/m/Y') . "</td>";
+                                echo "<td class = 'td_locacoes'>$aluguel->preco</td>";
+                                echo "<td class = 'td_locacoes'><button class = 'btn btn-danger' onClick='cancelarAluguel($aluguel->id)'>Cancelar</button></td>";
+                                echo '</tr>';
+                            }
+                            ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

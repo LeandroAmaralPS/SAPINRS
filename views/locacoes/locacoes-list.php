@@ -13,19 +13,18 @@
         <?php
         $frame = "Locações";
         include_once '../menu.php';
-        
-
+        include_once '../../controller/locacaoController.php';
+        $a = LocacaoController::getListLocacoes();
         ?>
         <script>
-            var locacoesArray = <?php echo json_encode($locacoes); ?>;
-            var countLocal = 6;
+            var locacoesArray = <?php print_r($a) ?>;
             var paginaAtual = 0;
             var DISPLAY_QTD = 4;
             $(document).ready(function () {
                 configuraView();
-                numPaginas = Math.floor(countLocal / DISPLAY_QTD);
+                numPaginas = Math.floor(locacoesArray.length / DISPLAY_QTD);
 
-                if (0 < countLocal % DISPLAY_QTD) {
+                if (0 < locacoesArray.length % DISPLAY_QTD) {
                     numPaginas++;
                 }
                 ;
@@ -42,18 +41,28 @@
 
             function configuraView() {
                 x = 0;
-                html = "";
-                while (x < DISPLAY_QTD) {
-                    html += '<div class="div_pai" id="div' + x + '">\n\
+                $.each(locacoesArray, function (i, local) {
+                    html = "";
+                    html += '<div class="div_pai" id="div' + x + '" >\n\
                                 <img />\n\
                                 <b><label id="nome_local"></label></b><br>\n\
                                 <span id="descricao"></span>\n\
                                 <label id="preco"></label>\n\
                                 <a><button class="btn btn-info">Reservar</button></a>\n\
                             </div>';
+                    $("#locacao_div").prepend(html);
+                    
+                    div = "#div" + x;
+
+                    $(div).show();
+                    $(div).find('img').attr('src', "/SAPINRS/img/" + local.img);
+                    $(div).find('#nome_local').text(local.nome);
+                    $(div).find('#descricao').text(local.descricao);
+                    $(div).find('#preco').text("Preço: " + local.preco);
+                    $(div).find('a').attr('href', 'locacao.php?id=' + local.id);
+
                     x++;
-                }
-                $("#locacao_div").prepend(html);
+                });
             }
 
             function atualizarPagina(acao) {
@@ -70,24 +79,17 @@
             }
 
             function atualizaLocacoes() {
+                $('.div_pai').hide();
                 max = DISPLAY_QTD * paginaAtual;
                 count = max - DISPLAY_QTD;
-                x = 0;
-                while (count < max) {
-                    div = "#div" + x;
+                console.log(max);
+                console.log(count);
 
-                    if (locacoesArray[count] == undefined) {
-                        $(div).hide();
-                    } else {
-                        $(div).show();
-                        $(div).find('img').attr('src', "/SAPINRS/img/" + locacoesArray[count].img);
-                        $(div).find('#nome_local').text(locacoesArray[count].nome);
-                        $(div).find('#descricao').text(locacoesArray[count].descricao);
-                        $(div).find('#preco').text("Preço: "+locacoesArray[count].preco);
-                        $(div).find('a').attr('href', 'locacao.php?id='+count);
-                    }
+
+                while (count < max) {
+                    div = "#div" + count;
+                    $(div).show();
                     count++;
-                    x++;
                 }
             }
         </script>

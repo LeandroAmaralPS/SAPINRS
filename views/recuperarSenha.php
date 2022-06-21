@@ -11,7 +11,7 @@
     <div class="content">      
       <!--FORMULÁRIO DE RECUPERAR SENHA-->
       <div id="login">
-        <form method="post" action="">
+        <form method="post" action="/SAPINRS/process/recuperarSenha.php">
           <h1>Recuperar a senha</h1> 
           <p> 
             <label for="cpf">CPF:</label>

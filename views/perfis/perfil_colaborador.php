@@ -8,11 +8,13 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
               integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="/SAPINRS/css/colaborador_Perfil.css">
+        <link rel="stylesheet" type="text/css" href="/SAPINRS/css/colaboradorPerfil.css">
         <title>Locação info</title>
         <?php
         $frame = "colaborador";
         include_once '../menu.php';
+        include_once '../../controller/usuarioController.php';
+        include_once '../../controller/aluguelController.php';
         ?>
         <script>
             $(document).ready(function () {
@@ -22,6 +24,10 @@
             function changeAba(aba){
                 $("#aba_logo").hide();
                 $("#aba_perfil_editar").hide();
+                $("#aba_locacoes_editar").hide();
+                $("#aba_usuarios_editar").hide();
+                $("#aba_alugueis").hide();
+                $("#aba_relatorio").hide();
                 $(aba).show();
             }
         </script>
@@ -36,29 +42,22 @@
                 </li>
                 <li class="aba">Administrativo
                     <ul class="sub_aba">
-                        <li>Locações<hr></li>
-                        <li>Permições<hr></li>
-                        <li>Usuários<hr></li>
+                        <li onclick="changeAba('#aba_locacoes_editar')">Locações<hr></li>
+                        <li onclick="changeAba('#aba_usuarios_editar')">Usuários<hr></li>
+                        <li onclick="changeAba('#aba_alugueis')">Alugueis<hr></li>
                     </ul>
                 </li>
-                <li class="aba" >Financeiro
-                    <ul class="sub_aba">
-                        <li>Despesas <hr></li>
-                        <li>Formas de Pagamento<hr></li>
-                        <li>Gerentes<hr></li>
-                        <li>NFS-E<hr></li>
-                    </ul>
-                </li>
-                <li class="aba" >Relatório</li>
-                <li class="aba" onclick="window.location.href = '/SAPINRS/index.php'" >Portal</li>
+                <?php if($_SESSION['permissao'] == 'gerente'){?>
+                <li class="aba" onclick="changeAba('#aba_relatorio')">Relatório</li>
+                <?php } ?>
             </ul>
         </div>
         <div id="div_colaborador">
             <div class="div_interna" id="div_info_colaborador">
-                <img src="/SAPINRS/img/usuario.jpg" width="100px" height="100px"/><br>
-                <b><label>Nome do Colaborador</label></b><br>
-                <label>Matricula: 123123</label><br>
-                <label>Setor: TI</label>
+                <img src="/SAPINRS/img/usuarios/<?= $img = usuarioController::getFoto($_SESSION['logado']);?>" width="100px" height="100px"/><br>
+                <b><label><?=$_SESSION['nome']?></label></b><br>
+                <label>CPF: <?=usuarioController::getCpf($_SESSION['logado'])?></label><br>
+                <label>Setor: <?=$_SESSION['permissao']?></label>
                 <hr>
                 Atalhos
             </div>
@@ -66,9 +65,11 @@
                 <img id="aba_logo" src="/SAPINRS/img/logo.png" width="150px" height="150px"/>
                 <?php
                     include_once '../forms/form_editar_perfil.php';
-//                    include_once '/SAPINRS/views/forms/';
-//                    include_once '/SAPINRS/views/forms/';
-//                    include_once '/SAPINRS/views/forms/';
+                    include_once '../forms/form_locacoes.php';
+                    include_once '../forms/form_usuarios.php';
+                    include_once '../forms/form_alugueis.php';
+                    include_once '../forms/form_relatorio.php';
+
                 ?>
             </div>
         </div>

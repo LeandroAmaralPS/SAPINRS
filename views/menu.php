@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="/SAPINRS/css/menu.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
     <?php
         if( session_status() != PHP_SESSION_ACTIVE ){
             session_start();
@@ -7,14 +8,7 @@
     ?>
 <div id="super_header">
 <?php 
-    $locacoes = array(
-        array("nome" => "Salão de Festas", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "1.png", "capacidade" => "X cabeças"),
-        array("nome" => "Piscina", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "2.png", "capacidade" => "X cabeças"),
-        array("nome" => "Churrasqueira", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "3.png", "capacidade" => "X cabeças"),
-        array("nome" => "Salão de Festas 2", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "4.png", "capacidade" => "X cabeças"),
-        array("nome" => "Auditório", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "5.png", "capacidade" => "X cabeças"),
-        array("nome" => "Churrasqueira 2", "descricao" => "Bla bla bla", "preco" => 66.69, "img" => "6.jpg", "capacidade" => "X cabeças"),
-    );
+
 
     switch ($frame){ 
     
@@ -31,7 +25,9 @@
             } else { 
                 echo '<a href="./controller/loginController.php"><button class="btn_login2">Deslogar</button></a>';
                 echo '<a href="/SAPINRS/views/perfis/perfil_usuario.php"><button class="btn_login">Perfil</button></a>';
-                echo '<a href="/SAPINRS/views/perfis/perfil_colaborador.php"><button class="btn_login3">Area do colaborador</button></a>';          
+                if ($_SESSION['permissao'] != 'socio'){
+                     echo '<a href="/SAPINRS/views/perfis/perfil_colaborador.php"><button class="btn_login3">Area do colaborador</button></a>';          
+                }
             }
             echo '</div>';
             ?>
@@ -63,7 +59,7 @@
         </div>
         <?php if(isset($_SESSION['logado'])){?>
             <div class="left_div">
-                <label class="title">nome do usuário</label>
+                <label class="title"><?=$_SESSION['nome']?></label>
             </div>
         <?php } ?>
     </div>
@@ -80,7 +76,7 @@
             <a href="/SAPINRS/index.php"><i class="fa fa-home"></i></a>
         </div>
             <div class="left_div">
-                <label class="title">nome do usuário</label>
+                <label class="title"><?=$_SESSION['nome']?></label>
             </div>
     </div>
     <?php 
@@ -96,7 +92,7 @@
             <a href="/SAPINRS/index.php"><i class="fa fa-home" style="color: #41B8C0 !important;"></i></a>
         </div>
             <div class="left_div">
-                <label class="title" style="color: #41B8C0 !important;">nome do usuário</label>
+                <label class="title" style="color: #41B8C0 !important;"><?=$_SESSION['nome']?></label>
             </div>
     </div>
     <?php

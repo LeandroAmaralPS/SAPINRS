@@ -84,7 +84,7 @@ body{
     height: 20px;
     text-align: center; 
     position: absolute;
-    bottom: 5%; 
+    bottom: -8%; 
 }
 
 .buttons button{
@@ -93,3 +93,8 @@ body{
     display: inline-block;
 }
 
+.checkbox_div {
+    text-align: left !important;
+    justify-content: center;
+    margin-left: 35%;
+}
